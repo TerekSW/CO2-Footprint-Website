@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <title>CO2 Footprint</title>
-        <meta name="view" content="width=device-width, initial-scale=1.0">
-        <link rel="design" href="NOCH DESIGNLINK">
-        <link rel="design" href="NOCH DESIGNLINK">
-    </head>
-    <body>
-        <header class="main text">
-            <img src="https://cdn-icons-png.flaticon.com/512/5142/5142938.png"
-        </header>
 
+<head>
+    <meta charset="UTF-8">
+    <title>CO2 Footprint</title>
+    <meta name="view" content="width=device-width, initial-scale=1.0">
+    <link rel="design" href="NOCH DESIGNLINK">
+    <link rel="design" href="NOCH DESIGNLINK">
+</head>
 
+<body>
+    <header class="mainText">
+        <h1>The CO2 Footprint</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/5142/5142938.png" 
+    </header>
 
+    <nav class="navigation">
+        <div>
+            <ul class="navbar">
+                <li class="navItem"><a class="nav" href="#">Home</a></li>
+                <li class="navItem"><a class="nav" href="#">Über uns</a></li>
+                <li class="navItem"><a class="nav" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <div class="filter">
+        <label for="filterType" class="formLabel">Filtern nach:</label>
+        <select id="filterType" class="formSelect">
+            <option value="land">Land</option>
+            <option value="unternehmen">Unternehmen</option>
+        </select>
+    </div>
 
+    <main class="table">
+        <h3>Sortiere nach:</h3>
+        <table id="emtable" class="emissionTable">
+            <thead>
+                <tr>
+                    <th><button onclick="sort(land)" class="btn">Land</button></th>
+                    <th><button onclick="sort(unternehmen)" class="btn">Unternehmen</button></th>
+                    <th><button onclick="sort(emissionen)" class="btn">Emissionen (in Millionen Tonnen) </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
 
+    <footer class="legalNotice">
+        <div>
+            <ul class="noticeList">
+                <li class="listItem"><a href="#impressum.html" class="notice">Impressum</a></li>
+                <li class="listItem"><a href="#datenschutz.html" class="notice">Datenschutz</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 CO₂-Organisation. Alle Rechte vorbehalten.</p>
+    </footer>
 
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </body>
 </html>

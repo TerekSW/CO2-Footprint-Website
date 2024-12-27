@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CO₂ Footprint</title>
+    <meta name="view" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header class="mainText">
+        <h1>The CO₂ Footprint</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/5142/5142938.png" alt="logo">
+    </header>
+
+    <nav class="navigation">
+        <div>
+            <ul class="navBar">
+                <li class="navItem"><a class="nav" href="#">Home</a></li>
+                <li class="navItem"><a class="nav" href="#">Über uns</a></li>
+                <li class="navItem"><a class="nav" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="filter">
+        <label for="filterType" class="formLabel">Filtern nach:</label>
+        <select id="filterType" class="formSelect">
+            <option value="land">Land</option>
+            <option value="unternehmen">Unternehmen</option>
+        </select>
+    </div>
+
+    <main class="table">
+        <table id="emtable" class="emissionTable">
+            <thead>
+                <tr>
+                    <th><button onclick="sort(name)" class="btn">Name</button></th>
+                    <th><button onclick="sort(emissionen)" class="btn">Emissionen (in Millionen Tonnen) </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+    <footer class="legalNotice">
+        <div>
+            <ul class="noticeList">
+                <li class="listItem"><a href="#impressum.html" class="notice">Impressum</a></li>
+                <li class="listItem"><a href="#datenschutz.html" class="notice">Datenschutz</a></li>
+            </ul>
+        </div>
+        <p>2024 The CO₂-Organisation. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>

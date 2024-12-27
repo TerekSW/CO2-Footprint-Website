@@ -1,5 +1,5 @@
 {
-    "laender": [
+    "land": [
       {"name": "China", "emissionen": 13400},
       {"name": "USA", "emissionen": 6630},
       {"name": "Indien", "emissionen": 3250},

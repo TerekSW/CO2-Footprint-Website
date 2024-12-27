@@ -42,6 +42,7 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: large;
 }
 
 .navLink:hover {
@@ -120,7 +121,7 @@ body {
     margin-right: 10px;
 }
 
-.tabel {
+.table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
@@ -128,7 +129,7 @@ body {
     table-layout: fixed;
 }
 
-.tabelSection {
+.tableSection {
     font-weight: bold;
     text-align: center;
     margin: 30px auto;
@@ -139,13 +140,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tabel thead {
+.table thead {
     background: gray;
     color: white;
 }
 
-.tabel th,
-.tabel td {
+.table th,
+.table td {
     border: 1px solid black;
     padding: 12px 15px;
     text-align: center;
@@ -155,11 +156,12 @@ body {
     font-size: large;
 }
 
-.tabel th {
+.table th {
     font-weight: bold;
+    background: grey;
 }
 
-.tabelBtn {
+.tableBtn {
     background: white;
     border: none;
     border-radius: 5px;
@@ -168,7 +170,7 @@ body {
     font-size: larger;
 }
 
-.tabelBtn:hover {
+.tableBtn:hover {
     background: green;
 }
 
@@ -215,8 +217,8 @@ body {
         max-width: 80%;
     }
 
-    .tabel th,
-    .tabel td {
+    .table th,
+    .table td {
         font-size: 0.85rem;
     }
 }
@@ -236,8 +238,8 @@ body {
         max-width: 90%;
     }
 
-    .tabel th,
-    .tabel td {
+    .table th,
+    .table td {
         font-size: 0.75rem;
         padding: 8px;
     }

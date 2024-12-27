@@ -4,18 +4,18 @@ CODE
 
 * [X] ~~*Titel*~~ [2024-12-27]
 * [X] ~~*Logo*~~ [2024-12-27]
-* [ ] Header mit globaler Navigation
+* [X] ~~*Header mit globaler Navigation*~~ [2024-12-27]
 * [ ] Content Bereich
-* [ ] Footer mit rechtlichen Hinweisen (Datenschutz, Impressum) --> einfach rechtlich korrekte Vorlage mit Beispielnamen/Adressen usw.
+* [X] ~~*Footer mit rechtlichen Hinweisen (Datenschutz, Impressum)*~~ [2024-12-27]
 * [X] ~~*Menü mit lokalen Links (je nach Schreibkultur rechts/links)*~~ [2024-12-27]
 * [ ] Tabelle mit fiktiven Emissionsdaten
 * [ ] Sortier- und Filterfunktion nach Land/Unternehmen
-* [ ] responiv (Smartphone, PC, Tablet)
+* [X] ~~*responiv (Smartphone, PC, Tablet)*~~ [2024-12-27]
 * [ ] Absicherung der Eingabefelder
 * [ ] evtl. Testfälle für Website
 * [X] ~~*Ablegen Code in Github Repository*~~ [2024-12-27]
 * [X] ~~*Repository public stellen*~~ [2024-12-27]
-
+* [ ] Kommentare zu allem kompakt aber verständlich
 
 DOKUMENTATION
 

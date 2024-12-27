@@ -107,16 +107,12 @@ function sanitize(input) {
 //Menu basierend auf Sprache
 function initializeMenu() {
     const htmlElement = document.documentElement; //Root-Element auswaehlen
-    const userLanguage = navigator.language || navigator.userLanguage; //Browsersprache abrufen
-    const rtlLanguages = ['ar', 'he', 'fa', 'ur']; //Liste RTL-Sprachen
 
-    //Sprache pruefen und Richtung setzen
-    if (rtlLanguages.includes(userLanguage.split('-')[0])) {
-        htmlElement.setAttribute('dir', 'rtl'); //RTL
-    } else {
-        htmlElement.setAttribute('dir', 'ltr'); //LTR
+    if (!htmlElement.getAttribute('dir')) {
+        htmlElement.setAttribute('dir', 'rtl'); // Nur setzen, wenn nicht bereits manuell festgelegt
     }
 }
+
 
 //Abfangen JavaScript-Fehler 
 window.onerror = function (message, source, lineno, colno, error) {

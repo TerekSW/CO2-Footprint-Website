@@ -1,13 +1,13 @@
-/*Allgemein*/
+/*Grundlegende Einstellungen gesamte Seite*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /*Schriftart*/
     margin: 0;
     padding: 0;
 }
 
 /*Header*/
 header.mainText {
-    text-align: center;
+    text-align: center; /*zentriert Inhalt*/
     background: green;
     color: white;
     padding: 1rem;

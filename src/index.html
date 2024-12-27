@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,16 +9,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <!-- Design CSS -->
+    <!-- eigenes Design CSS -->
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header">
-        <h1>The CO₂ Footprint</h1>
+    <header class="header bg-success py-3"> <!--Hintergrund gruen, vertikales Padding-->
+        <h1 class = "text-white text-center">The CO₂ Footprint</h1> <!--weiße Schrift, zentriert-->
         <!-- erstelltes Logo-->
-        <div class="logo">
+        <div class="logo text-center"> <!--zentriert Logo-->
             <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
                 <!-- Kreis -->
                 <circle cx="75" cy="75" r="70" stroke="darkgreen" stroke-width="5" fill="lightgreen"></circle>
@@ -27,62 +27,65 @@
                     dy=".3em">CO₂</text>
             </svg>
         </div>
- 
     </header>
 
     <!-- Navigation -->
-    <nav class="nav">
-        <ul class="navList">
-            <li><a href="infos/about.html" class="navLink">Über</a></li>
-            <li><a href="infos/contact.html" class="navLink">Kontakt</a></li>
+    <nav class="navBar bg-success"> <!--Hintergrund gruen-->
+        <ul class="navList list-unstyled text-center"> <!--entfernen Listensymbole, zentriert-->
+            <li><a href="infos/about.html" class="navLink">Über</a></li>    <!--Link fuer Über-->
+            <li><a href="infos/contact.html" class="navLink">Kontakt</a></li> <!--Link fuer Kontakt-->
         </ul>
     </nav>
 
-    <!-- Menu -->
-    <section class="menu">
-        <h2>Menü</h2>
-        <ul class="menuList">
-            <!--Beispiellinks passend zur Website-->
-            <li><a href="https://de.statista.com/statistik/daten/studie/37187/umfrage/der-weltweite-co2-ausstoss-seit-1751/"
-                 class="menuLink">CO₂-Ausstoß 2023</a></li>
-            <li><a href="https://www.destatis.de/DE/Themen/Laender-Regionen/Internationales/Thema/umwelt-energie/umwelt/G20_CO2.html"
-                 class="menuLink">G20 Emissionen</a></li>
-            <li><a href="https://www.co2online.de/klima-schuetzen/co2-ausstoss-der-laender/" class="menuLink">
-                Rangliste der weltweiten CO2-Emittenten</a></li>
-        </ul>
-    </section>
+    <main>
+        <!-- Menu -->
+        <section class="menu bg-success"> <!--Hintergrund gruen-->
+            <h2>Menü</h2>
+            <ul class="menuList">
+                <!--Beispiellinks passend zur Website-->
+                <li><a href="https://de.statista.com/statistik/daten/studie/37187/umfrage/der-weltweite-co2-ausstoss-seit-1751/"
+                        class="menuLink">CO₂-Ausstoß 2023</a></li>
+                <li><a href="https://www.destatis.de/DE/Themen/Laender-Regionen/Internationales/Thema/umwelt-energie/umwelt/G20_CO2.html"
+                        class="menuLink">G20 Emissionen</a></li>
+                <li><a href="https://www.co2online.de/klima-schuetzen/co2-ausstoss-der-laender/" class="menuLink">
+                        Rangliste der weltweiten CO2-Emittenten</a></li>
+            </ul>
+        </section>
 
-    <!-- Filterfunktion -->
-    <section class="filter">
-        <h2>Filter</h2>
-        <label for="filterSelect" class="filterLabel">Filtern nach:</label>
-        <select id="filterSelect" class="filterSelect">
-            <option value="land">Land</option>
-            <option value="unternehmen">Unternehmen</option>
-        </select>
-    </section>
+        <!-- Filterfunktion -->
+        <section class="filter text-center"> <!--zentriert-->
+            <h2>Filter</h2>
+            <label for="filterSelect" class="filterLabel fw-bold">Filtern nach:</label> <!--fettgedruckt-->
+            <select id="filterSelect" class="filterSelect fw-bold"> <!--fettgedruckt-->
+                <!--Auswahlmoeglichkeiten-->
+                <option value="land">Land</option>
+                <option value="unternehmen">Unternehmen</option>
+            </select>
+        </section>
 
-    <!-- Tabelle -->
-    <section class="tableSection">
-        <h2>CO₂-Emissionsdaten</h2>
-        <table id="tableData" class="table">
-            <thead>
-                <tr>
-                    <th><button onclick="sortTable('name')" class="tableBtn">Name</button></th>
-                    <th><button onclick="sortTable('emissionen')" class="tableBtn">Emissionen (in Millionen Tonnen)</button></th>
-                </tr>
-            </thead>
-            <tbody>
+        <!-- Tabelle -->
+        <section class="tableSection">
+            <h2>CO₂-Emissionsdaten</h2>
+            <table id="tableData" class="table table-striped table-hover text-center"> <!--Standardtabelle, wechselnde Farben, Hervorheben, zentriert-->
+                <thead>
+                    <tr>
+                        <th><button onclick="sortTable('name')" class="tableBtn">Name</button></th> <!--Button fuer Namenssortierung-->
+                        <th><button onclick="sortTable('emissionen')" class="tableBtn">Emissionen (in Millionen <!--Button fuer Emissionssortierung-->
+                                Tonnen)</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Daten werden dynamisch eingefügt -->
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-            </tbody>
-        </table>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer text-white text-center py-3 bg-success"> <!--weiße Schrift, zentriert, Hintergrund gruen, vertikales Padding-->
         <ul class="footerList">
-            <li><a href="infos/impressum.html" class="footerLink">Impressum</a></li>
-            <li><a href="infos/Datenschutzerklärung.pdf" class="footerLink">Datenschutz</a></li>
+            <li><a href="infos/impressum.html" class="footerLink">Impressum</a></li> <!--Link fuer Impressum-->
+            <li><a href="infos/Datenschutzerklärung.pdf" class="footerLink">Datenschutz</a></li> <!--Link fuer Datenschutz-->
         </ul>
         <p>&copy; 2024 The CO₂-Footprint. Alle Rechte vorbehalten.</p>
     </footer>
@@ -90,11 +93,7 @@
     <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -16,7 +16,7 @@
 
     <nav class="navigation">
         <div>
-            <ul class="navbar">
+            <ul class="navBar">
                 <li class="navItem"><a class="nav" href="#">Home</a></li>
                 <li class="navItem"><a class="nav" href="#">Über uns</a></li>
                 <li class="navItem"><a class="nav" href="#">Kontakt</a></li>
@@ -33,12 +33,10 @@
     </div>
 
     <main class="table">
-        <h3>Sortiere nach:</h3>
         <table id="emtable" class="emissionTable">
             <thead>
                 <tr>
-                    <th><button onclick="sort(land)" class="btn">Land</button></th>
-                    <th><button onclick="sort(unternehmen)" class="btn">Unternehmen</button></th>
+                    <th><button onclick="sort(name)" class="btn">Name</button></th>
                     <th><button onclick="sort(emissionen)" class="btn">Emissionen (in Millionen Tonnen) </button>
                     </th>
                 </tr>

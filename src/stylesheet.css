@@ -91,13 +91,16 @@ body {
     margin: 30px auto;
     padding: 20px;
     background: lightgrey;
-    border-radius: 8px;
+    border-radius: 10px;
     max-width: 20%;
+
 }
 
 .filter h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
     color: black;
+    font-weight: bold;
 }
 
 .filterSelect {
@@ -105,12 +108,16 @@ body {
     border: 1px solid white;
     border-radius: 5px;
     font-size: 1rem;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;   
+}
+
+.filterLabel {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .tabel {
-    
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
@@ -126,21 +133,23 @@ body {
     max-width: 100%;
     background: lightgrey;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .tabel thead {
     background: gray;
-    color: white;
+    color: white; 
 }
 
 .tabel th,
-.tabel td {
-    
+.tabel td {  
     border: 1px solid black;
     padding: 12px 15px;
     text-align: center;
     font-size: 1,5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: large;
 }
 
 .tabel th {
@@ -153,7 +162,7 @@ body {
     border-radius: 5px;
     padding: 5px 15px;
     font-weight: bold;
-    font-size: large;
+    font-size: larger;
 }
 
 .tabelBtn:hover {
@@ -187,8 +196,50 @@ body {
     text-decoration: underline;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .menuList {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .filter {
+        max-width: 80%;
+    }
 
+    .tabel th,
+    .tabel td {
+        font-size: 0.85rem;
+    }
+}
 
+/* Smartphone */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
 
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .filter {
+        max-width: 90%;
+    }
+
+    .tabel th,
+    .tabel td {
+        font-size: 0.75rem;
+        padding: 8px;
+    }
+
+    .footerList {
+        flex-direction: column;
+    }
+}

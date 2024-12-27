@@ -11,10 +11,10 @@ CODE
 * [ ] Tabelle mit fiktiven Emissionsdaten
 * [ ] Sortier- und Filterfunktion nach Land/Unternehmen
 * [ ] responiv (Smartphone, PC, Tablet)
-* [ ] Abischerung der Eingabefelder
+* [ ] Absicherung der Eingabefelder
 * [ ] evtl. Testfälle für Website
 * [X] ~~*Ablegen Code in Github Repository*~~ [2024-12-27]
-* [ ] Repository public stellen
+* [X] ~~*Repository public stellen*~~ [2024-12-27]
 
 
 DOKUMENTATION

@@ -6,7 +6,7 @@ CODE
 * [ ] Logo
 * [ ] Header mit globaler Navigation
 * [ ] Content Bereich
-* [ ] Footer mit rechtlichen Hinweisen
+* [ ] Footer mit rechtlichen Hinweisen (Datenschutz, Impressum) --> einfach rechtlich korrekte Vorlage mit Beispielnamen/Adressen usw.
 * [ ] Menü mit lokalen Links (je nach Schreibkultur rechts/links)
 * [ ] Tabelle mit fiktiven Emissionsdaten
 * [ ] Sortier- und Filterfunktion nach Land/Unternehmen
@@ -21,7 +21,7 @@ DOKUMENTATION
 
 Formalia:
 
-* [ ] Umfang:           7-10 Seiten Textteil
+* [ ] Umfang:           12-13 Seiten Textteil OK, WENN erhöhter Umfang durch Abbildungen Quellcodeauszügen, sonst in Anhang
 * [ ] Papierformat:     DIN A4
 * [ ] Seitenränder:     Oben und unten 2 cm; links 2 cm; rechts 2 cm
 * [ ] Seitenzahlen:     Zentriert am Seitenende --> weitere Vorgaben in 2.3 Formalia    
@@ -37,10 +37,12 @@ Formalia:
 * [ ] Abgabe
 
 
+* [ ] Sprint Session 7/7: Programmierung von Webanwendungsoberflächen BEACHTEN
+
 
 Struktur:
 
-* [ ] Titelblatt
+* [ ] Titelblatt mit Link zum Repository
 * [ ] Inhaltsverzeichnis
 * [ ] Abbildungsverzeichnis
 * [ ] evtl. Tabellenverzeichnis

@@ -3,57 +3,95 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CO₂ Footprint</title>
-    <meta name="view" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Design CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header class="mainText">
-        <h1>The CO₂ Footprint</h1>
-        <img src="https://cdn-icons-png.flaticon.com/512/5142/5142938.png" alt="logo">
+    <!-- Header -->
+    <header class="header">
+        <h1>CO₂ Footprint</h1>
+        <!-- erstelltes Logo-->
+        <div class="logo">
+            <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Kreis -->
+                <circle cx="75" cy="75" r="70" stroke="darkgreen" stroke-width="5" fill="lightgreen"></circle>
+                <!-- Text -->
+                <text x="50%" y="50%" text-anchor="middle" fill="green" font-size="24" font-weight="bold"
+                    dy=".3em">CO₂</text>
+            </svg>
+        </div>
+
     </header>
 
-    <nav class="navigation">
-        <div>
-            <ul class="navBar">
-                <li class="navItem"><a class="nav" href="#">Home</a></li>
-                <li class="navItem"><a class="nav" href="#">Über uns</a></li>
-                <li class="navItem"><a class="nav" href="#">Kontakt</a></li>
-            </ul>
-        </div>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="navList">
+            <li><a href="#" class="navLink">Start</a></li>
+            <li><a href="#" class="navLink">Über</a></li>
+            <li><a href="#" class="navLink">Kontakt</a></li>
+        </ul>
     </nav>
 
-    <div class="filter">
-        <label for="filterType" class="formLabel">Filtern nach:</label>
-        <select id="filterType" class="formSelect">
+    <!-- Menu -->
+    <section class="menu">
+        <h2>Menü</h2>
+        <ul class="menuList">
+            <li><a href="#" class="menuLink">Link 1</a></li>
+            <li><a href="#" class="menuLink">Link 2</a></li>
+            <li><a href="#" class="menuLink">Link 3</a></li>
+        </ul>
+    </section>
+
+    <!-- Filterfunktion -->
+    <section class="filter">
+        <h2>Filter</h2>
+        <label for="filterSelect" class="filterLabel">Filtern nach:</label>
+        <select id="filterSelect" class="filterSelect">
             <option value="land">Land</option>
             <option value="unternehmen">Unternehmen</option>
         </select>
-    </div>
+    </section>
 
-    <main class="table">
-        <table id="emtable" class="emissionTable">
+    <!-- Tabelle -->
+    <section class="tabelSection">
+        <h2>CO₂-Emissionsdaten</h2>
+        <table id="tabeldata" class="tabel">
             <thead>
                 <tr>
-                    <th><button onclick="sort(name)" class="btn">Name</button></th>
-                    <th><button onclick="sort(emissionen)" class="btn">Emissionen (in Millionen Tonnen) </button>
-                    </th>
+                    <th><button onclick="sortTable('name')" class="tabelBtn">Name</button></th>
+                    <th><button onclick="sortTable('emissionen')" class="tabelBtn">Emissionen</button></th>
                 </tr>
             </thead>
-            <tbody></tbody>
-        </table>
-    </main>
+            <tbody>
 
-    <footer class="legalNotice">
-        <div>
-            <ul class="noticeList">
-                <li class="listItem"><a href="#impressum.html" class="notice">Impressum</a></li>
-                <li class="listItem"><a href="#datenschutz.html" class="notice">Datenschutz</a></li>
-            </ul>
-        </div>
-        <p>2024 The CO₂-Organisation. Alle Rechte vorbehalten.</p>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="footerList">
+            <li><a href="impressum.html" class="footerLink">Impressum</a></li>
+            <li><a href="datenschutz.html" class="footerLink">Datenschutz</a></li>
+        </ul>
+        <p>&copy; 2024 The CO₂-Organisation. Alle Rechte vorbehalten.</p>
     </footer>
 
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>

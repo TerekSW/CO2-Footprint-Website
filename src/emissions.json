@@ -1,0 +1,28 @@
+{
+    "laender": [
+      {"name": "China", "emissionen": 13400},
+      {"name": "USA", "emissionen": 6630},
+      {"name": "Indien", "emissionen": 3250},
+      {"name": "Russland", "emissionen": 2160},
+      {"name": "Japan", "emissionen": 1210},
+      {"name": "Deutschland", "emissionen": 811},
+      {"name": "Iran", "emissionen": 720},
+      {"name": "Saudi-Arabien", "emissionen": 635},
+      {"name": "Südkorea", "emissionen": 611},
+      {"name": "Indonesien", "emissionen": 540}
+    ],
+
+    "unternehmen": [
+      {"name": "China National Petroleum", "emissionen": 1600},
+      {"name": "Saudi Aramco", "emissionen": 1500},
+      {"name": "Gazprom", "emissionen": 1400},
+      {"name": "National Iranian Oil Company", "emissionen": 1200},
+      {"name": "ExxonMobil", "emissionen": 1000},
+      {"name": "Shell", "emissionen": 900},
+      {"name": "BP", "emissionen": 850},
+      {"name": "TotalEnergies", "emissionen": 800},
+      {"name": "RWE", "emissionen": 700},
+      {"name": "E.ON", "emissionen": 650}
+    ]
+}
+  

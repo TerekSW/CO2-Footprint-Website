@@ -110,6 +110,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Leichter Schatten*/
     max-width: 70%; /*Maximale Breite*/
     overflow-x: auto; /*Horizontale Scrollleiste bei Bedarf*/
+    font-size: large;
+    font-weight: bold;
 }
 
 .tableSection h2 {
@@ -123,6 +125,7 @@ body {
     color: #28a745; /*Gruene Schriftfarbe*/
     font-weight: bold;
     cursor: pointer; /*Zeiger als Hand*/
+    font-size: larger;
 }
 
 .table th,

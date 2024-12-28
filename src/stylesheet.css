@@ -187,8 +187,6 @@ html[dir="rtl"] .menuLink {
     padding-left: 0 !important; /* Entfernt Abstand von links */
 }
 
-
-
 /* Responsives Design */
 @media (max-width: 768px) {
     .header h1 {

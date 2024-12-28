@@ -32,7 +32,6 @@ function fetchData() {
         .catch(error => console.error('Fehler:', error)); //Fehlerprotokollierung
 }
 
-
 //Erstellung/Anzeige Tabelle 
 function displayTable(data) {
     const tableBody = document.querySelector('#tableData tbody'); //Tabellevariable auswaehlen
@@ -55,7 +54,6 @@ function displayTable(data) {
         tableBody.appendChild(row); //Zeile zu Tabelle hinzufuegen
     });
 }
-
 
 //Sortierung Name/Emissionen.
 function sortTable(column) {
@@ -96,7 +94,6 @@ function validateInputs() {
     });
 }
 
-
 //Bereinigt Eingaben, um potenzielle Angriffe zu verhindern.
 function sanitize(input) {
     const temp = document.createElement('div'); //Temporaeres HTML-Element erstellen
@@ -112,7 +109,6 @@ function initializeMenu() {
         htmlElement.setAttribute('dir', 'rtl'); // Nur setzen, wenn nicht bereits manuell festgelegt
     }
 }
-
 
 //Abfangen JavaScript-Fehler 
 window.onerror = function (message, source, lineno, colno, error) {

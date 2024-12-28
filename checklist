@@ -5,13 +5,13 @@ CODE
 * [X] ~~*Titel*~~ [2024-12-27]
 * [X] ~~*Logo*~~ [2024-12-27]
 * [X] ~~*Header mit globaler Navigation*~~ [2024-12-27]
-* [ ] Content Bereich
+* [X] ~~*Content Bereich*~~ [2024-12-28]
 * [X] ~~*Footer mit rechtlichen Hinweisen (Datenschutz, Impressum)*~~ [2024-12-27]
 * [X] ~~*Menü mit lokalen Links (je nach Schreibkultur rechts/links)*~~ [2024-12-27]
-* [ ] Tabelle mit fiktiven Emissionsdaten
-* [ ] Sortier- und Filterfunktion nach Land/Unternehmen
+* [X] ~~*Tabelle mit fiktiven Emissionsdaten*~~ [2024-12-28]
+* [X] ~~*Sortier- und Filterfunktion nach Land/Unternehmen*~~ [2024-12-28]
 * [X] ~~*responiv (Smartphone, PC, Tablet)*~~ [2024-12-27]
-* [ ] Absicherung der Eingabefelder
+* [X] ~~*Absicherung der Eingabefelder*~~ [2024-12-28]
 * [ ] evtl. Testfälle für Website
 * [X] ~~*Ablegen Code in Github Repository*~~ [2024-12-27]
 * [X] ~~*Repository public stellen*~~ [2024-12-27]

@@ -14,56 +14,7 @@ CODE
 * [X] ~~*Absicherung der Eingabefelder*~~ [2024-12-28]
 * [X] ~~*Ablegen Code in Github Repository*~~ [2024-12-27]
 * [X] ~~*Repository public stellen*~~ [2024-12-27]
-* [ ] Kommentare zu allem kompakt aber verständlich
-
-DOKUMENTATION
-
-Formalia:
-
-* [ ] Umfang:           12-13 Seiten Textteil OK, WENN erhöhter Umfang durch Abbildungen Quellcodeauszügen, sonst in Anhang
-* [ ] Papierformat:     DIN A4
-* [ ] Seitenränder:     Oben und unten 2 cm; links 2 cm; rechts 2 cm
-* [ ] Seitenzahlen:     Zentriert am Seitenende --> weitere Vorgaben in 2.3 Formalia    
-* [ ] Schrifttyp:       Allgemeiner Text – Arial 11 Pkt.; Überschriften – 12 Pkt., Blocksatz
-* [ ] Zeilenabstand:    1,5
-* [ ] Satz:             Blocksatz und Silbentrennung
-* [ ] Fußnoten:         Arial 10 Pkt., Blocksatz
-* [ ] Absätze:          Nach gedanklicher Gliederung – 6 Pkt. Abstand nach Zeilenumbruch
-* [ ] Titelblatt:       Titel Arbeit, Art Arbeit, Kursbezeichnung, Studiengang, Datum, Name Verfasser, Matrikelnumer, Name Tutor
-* [ ] Kapitelstufen:    Maximal 3 Stufen (1. Hauptüberschrift, 1.1 Abschnitt, 1.1.1 Unterkapitel) --> weitere Vorgaben in 2.3 Formalia
-* [ ] Zitierstandard:   Bitte beachte hierzu den Zitationsleitfaden auf myCampus.
-* [ ] Eidesstattliche Erklärung
-* [ ] Abgabe
-
-
-* [ ] Sprint Session 7/7: Programmierung von Webanwendungsoberflächen BEACHTEN
-
-
-Struktur:
-
-* [ ] Titelblatt mit Link zum Repository
-* [ ] Inhaltsverzeichnis
-* [ ] Abbildungsverzeichnis
-* [ ] evtl. Tabellenverzeichnis
-* [ ] evtl. Abkürzungsverzeichnis
-* [ ] Einleitung    
-* [ ] Hauptteil     
-* [ ] Schluss       
-* [ ] Literaturverzeichnis
-* [ ] Verzeichnis der Anhänge
-* [ ] Anhänge und Materialien
-
-
-PRÜFUNGSKRITERIEN:
-
-* [ ] Erfassung:    Erfassung des Problems
-* [ ] Vorgehen:     Methodik der Umsetzung
-* [ ] Qualität:     Qualität der Umsetzung
-* [ ] Ergebnis:     Umfang und Vollständigkeit des Ergebnisses
-* [ ] Formalia:     Einhaltung der formalen Vorgaben
-* [ ] Richtigkeit:  Rechtschreibung und Interpunktion
-* [ ] Sprache:      Sprachlicher Ausdruck
-
+* [X] ~~*Kommentare zu allem kompakt aber verständlich*~~ [2024-12-28]
 
 Quellen:
 

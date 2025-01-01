@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CO₂ Footprint</title>
 
-    <!-- Bootstrap CSS -->
+    <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <!-- eigenes Design CSS -->
+    <!--eigenes Design CSS-->
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
-    <!-- Header -->
+    <!--Header-->
     <header class="header bg-success py-3"> <!--Hintergrund gruen, vertikales Padding-->
         <h1 class = "text-white text-center">The CO₂ Footprint</h1> <!--weiße Schrift, zentriert-->
-        <!-- erstelltes Logo-->
+        <!--erstelltes Logo-->
         <div class="logo text-center"> <!--zentriert Logo-->
             <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-                <!-- Kreis -->
+                <!--Kreis-->
                 <circle cx="75" cy="75" r="70" stroke="darkgreen" stroke-width="5" fill="lightgreen"></circle>
-                <!-- Text -->
+                <!--Text-->
                 <text x="50%" y="50%" text-anchor="middle" fill="green" font-size="24" font-weight="bold"
                     dy=".3em">CO₂</text>
             </svg>
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!--Navigation-->
     <nav class="navBar bg-success"> <!--Hintergrund gruen-->
         <ul class="navList list-unstyled text-center"> <!--entfernen Listensymbole, zentriert-->
             <li><a href="infos/about.html" class="navLink">Über uns</a></li>    <!--Link fuer Über-->
@@ -38,21 +38,21 @@
     </nav>
 
     <main>
-        <!-- Menu -->
+        <!--Menu-->
         <section class="menu bg-success"> <!--Hintergrund gruen-->
             <h2>Menü</h2>
             <ul class="menuList list-unstyled">
                 <!--Beispiellinks passend zur Website-->
                 <li><a href="https://de.statista.com/statistik/daten/studie/37187/umfrage/der-weltweite-co2-ausstoss-seit-1751/"
-                        class="menuLink fw-bold">CO₂-Ausstoß 2023</a></li>
+                        class="menuLink fw-bold">CO₂-Ausstoß 2023 (statista.com)</a></li>
                 <li><a href="https://www.destatis.de/DE/Themen/Laender-Regionen/Internationales/Thema/umwelt-energie/umwelt/G20_CO2.html"
-                        class="menuLink fw-bold">G20 Emissionen</a></li>
+                        class="menuLink fw-bold">G20 Emissionen (destatis.de)</a></li>
                 <li><a href="https://www.co2online.de/klima-schuetzen/co2-ausstoss-der-laender/" class="menuLink fw-bold">
-                        Rangliste der weltweiten CO2-Emittenten</a></li>
+                        Rangliste der weltweiten CO2-Emittenten (co2online.de)</a></li>
             </ul>
         </section>
 
-        <!-- Filterfunktion -->
+        <!--Filterfunktion-->
         <section class="filter text-center"> <!--zentriert-->
             <h2>Filter</h2>
             <label for="filterSelect" class="filterLabel fw-bold">Filtern nach:</label> <!--fettgedruckt-->
@@ -63,37 +63,38 @@
             </select>
         </section>
 
-        <!-- Tabelle -->
+        <!--Tabelle-->
         <section class="tableSection text-center">
             <h2>CO₂-Emissionsdaten</h2>
             <table id="tableData" class="table table-striped table-hover text-center"> <!--Standardtabelle, wechselnde Farben, Hervorheben, zentriert-->
                 <thead>
                     <tr>
+                        <!--Buttons fuer Tabelle-->
                         <th><button onclick="sortTable('name')" class="tableBtn">Name</button></th> <!--Button fuer Namenssortierung-->
                         <th><button onclick="sortTable('emissionen')" class="tableBtn">Emissionen (in Millionen <!--Button fuer Emissionssortierung-->
                                 Tonnen)</button></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Daten werden dynamisch eingefügt -->
+                    <!--Daten werden dynamisch eingefuegt-->
                 </tbody>
             </table>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!--Footer-->
     <footer class="footer text-white text-center py-3 bg-success"> <!--weiße Schrift, zentriert, Hintergrund gruen, vertikales Padding-->
         <ul class="footerList list-unstyled">
             <li><a href="infos/impressum.html" class="footerLink">Impressum</a></li> <!--Link fuer Impressum-->
             <li><a href="infos/Datenschutzerklärung.pdf" class="footerLink">Datenschutz</a></li> <!--Link fuer Datenschutz-->
         </ul>
-        <p>&copy; 2024 The CO₂-Footprint. Alle Rechte vorbehalten.</p>
+        <p>2024 The CO₂-Footprint. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <!-- Bootstrap JavaScript Bundle -->
+    <!--Bootstrap JavaScript Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript -->
+    <!--JavaScript-->
     <script src="script.js"></script>
 </body>
 </html>

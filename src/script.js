@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validateInputs();  //Sichere Eingabefelder
 });
 
-//laedt JSON-Datei/Filter 
+//laedt JSON-Datei
 function fetchData() {
     fetch("emissions.json") //JSON-Datei abrufen
         .then(response => {
@@ -22,6 +22,7 @@ function fetchData() {
         .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
 }
 
+//Filterfunktion
 function filterTable(data) {
 
     document.getElementById("filterSelect").addEventListener("change", (event) => {

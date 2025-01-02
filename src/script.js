@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     validateInputs();  //Sichere Eingabefelder
 });
 
-//laedt JSON-Datei 
+//laedt JSON-Datei/Filter 
 function fetchData() {
     fetch('emissions.json') //JSON-Datei abrufen
         .then(response => {

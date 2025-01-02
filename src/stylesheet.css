@@ -188,9 +188,9 @@ html[dir="rtl"] .menuLink {
     text-decoration: underline; /*Unterstrichen beim Hover*/
 }
 
-
-
 /* Responsives Design */
+
+/* Tablet */
 @media (max-width: 768px) {
     .header h1 {
         font-size: 1.8rem; /*Kleinere Schriftgroeße*/
@@ -211,5 +211,29 @@ html[dir="rtl"] .menuLink {
     .filter h2,
     .tableSection h2 {
         font-size: 1.5rem; /*Kleinere Ueberschriften*/
+    }
+}
+
+/* Smartphone */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /*Kleinere Schriftgroeße*/
+    }
+
+    .navList li {
+        display: block; /*Links untereinander*/
+        margin: 5px 0; /*Abstand Links*/
+    }
+
+    .menu,
+    .filter,
+    .tableSection {
+        padding: 10px; /*Reduzierter Innenabstand*/
+    }
+
+    .menu h2,
+    .filter h2,
+    .tableSection h2 {
+        font-size: 1.2rem; /*Kleinere Ueberschriften*/
     }
 }

@@ -70,6 +70,32 @@ body {
     text-decoration: underline; /*Unterstrichen beim Hover*/
 }
 
+/* Erzwinge RTL-Ausrichtung für das Menü */
+html[dir="rtl"] .menu {
+    direction: rtl; /*Priorisiert RTL-Ausrichtung*/
+    text-align: right; /*Stellt sicher, dass Text rechtsbündig bleibt*/
+    margin: 5px auto; /*Zentriert mit Abstand*/
+    padding: 20px; 
+}
+
+/* Menü-Liste nach rechts ausrichten */
+html[dir="rtl"] .menuList {
+    direction: rtl; /*Liste von rechts nach links ausrichten */
+    text-align: right; /*Links innerhalb der Liste rechtsbündig*/
+    padding-left: 0 ; /*Entfernt linken Abstand */
+}
+
+/* Menü-Elemente korrekt ausrichten */
+html[dir="rtl"] .menuList li {
+    text-align: right; /*Listenelemente rechtsbündig*/
+    margin-bottom: 10px; /*Abstand zwischen Eintraegen*/
+}
+
+/* Menü-Links korrekt ausrichten */
+html[dir="rtl"] .menuLink {
+    text-align: right; /*Text rechtsbündig*/
+}
+
 /* Filter */
 .filter {
     margin: 30px auto;
@@ -162,33 +188,7 @@ body {
     text-decoration: underline; /*Unterstrichen beim Hover*/
 }
 
-/* Erzwinge RTL-Ausrichtung für das Menü */
-html[dir="rtl"] .menu {
-    direction: rtl !important; /*Priorisiert RTL-Ausrichtung*/
-    text-align: right !important; /*Stellt sicher, dass Text rechtsbündig bleibt*/
-}
 
-/* Menü-Liste nach rechts ausrichten */
-html[dir="rtl"] .menuList {
-    direction: rtl !important; /*Liste von rechts nach links ausrichten */
-    text-align: right !important; /* Links innerhalb der Liste rechtsbündig */
-    padding-left: 0 !important; /* Entfernt linken Abstand */
-    padding-right: 20px !important; /* Fügt rechten Abstand hinzu */
-}
-
-/* Menü-Elemente korrekt ausrichten */
-html[dir="rtl"] .menuList li {
-    text-align: right !important; /*Listenelemente rechtsbündig*/
-    margin: 5px 0 !important; /*Vertikaler Abstand zwischen Elementen*/
-}
-
-/* Menü-Links korrekt ausrichten */
-html[dir="rtl"] .menuLink {
-    display: block !important; /*Sorgt für volle Breite der Links*/
-    text-align: right !important; /*Text rechtsbündig*/
-    padding-right: 10px !important; /*Abstand von rechts*/
-    padding-left: 0 !important; /*Entfernt Abstand von links*/
-}
 
 /* Responsives Design */
 @media (max-width: 768px) {

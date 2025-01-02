@@ -16,20 +16,24 @@ function fetchData() {
             return response.json(); //Antwort in JSON umwandeln
         })
         .then(data => {
-            displayTable(data.land); // 
-
-            //Event-Listener Dropdown-Filter
-            document.getElementById("filterSelect").addEventListener("change", (event) => {
-                const filter = event.target.value; //Filterwert 
-                //Filterwert --> Anzeige Laenderdaten/Unternehmensdaten
-                if (filter === "land") {
-                    displayTable(data.land);
-                } else if (filter === "unternehmen") {
-                    displayTable(data.unternehmen);
-                }
-            });
+            displayTable(data.land); 
+            filterTable(data);
         })
         .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
+}
+
+function filterTable(data) {
+
+    document.getElementById("filterSelect").addEventListener("change", (event) => {
+        const filter = event.target.value; //Filterwert 
+        //Filterwert --> Anzeige Laenderdaten/Unternehmensdaten
+        if (filter === "land") {
+            displayTable(data.land);
+        } else if (filter === "unternehmen") {
+            displayTable(data.unternehmen);
+        }
+    });
+
 }
 
 //Erstellung/Anzeige Tabelle 
@@ -116,5 +120,5 @@ function initializeMenu() {
 
 //Abfangen JavaScript-Fehler 
 window.onerror = function (message, source, lineno, colno, error) {
-    console.error(`Fehler: ${message} in ${source} (Zeile ${lineno}, Spalte ${colno})`);
+    console.error("Fehler: ${message} in ${source} (Zeile ${lineno}, Spalte ${colno})");
 };

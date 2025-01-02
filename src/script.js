@@ -1,5 +1,5 @@
 //DOM Hauptfunktionen
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     fetchData();       //Lade JSON-Datei
     initializeMenu();  //Menueausrichtung 
     validateInputs();  //Sichere Eingabefelder
@@ -7,46 +7,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //laedt JSON-Datei/Filter 
 function fetchData() {
-    fetch('emissions.json') //JSON-Datei abrufen
+    fetch("emissions.json") //JSON-Datei abrufen
         .then(response => {
             //pruefen ob Antwort erfolgreich
             if (!response.ok) {
-                throw new Error('Fehler beim Laden der JSON-Datei');
+                throw new Error("Fehler beim Laden der JSON-Datei");
             }
             return response.json(); //Antwort in JSON umwandeln
         })
         .then(data => {
             displayTable(data.land); // 
-            
+
             //Event-Listener Dropdown-Filter
-            document.getElementById('filterSelect').addEventListener('change', (event) => {
+            document.getElementById("filterSelect").addEventListener("change", (event) => {
                 const filter = event.target.value; //Filterwert 
                 //Filterwert --> Anzeige Laenderdaten/Unternehmensdaten
-                if (filter === 'land') {
+                if (filter === "land") {
                     displayTable(data.land);
-                } else if (filter === 'unternehmen') {
+                } else if (filter === "unternehmen") {
                     displayTable(data.unternehmen);
                 }
             });
         })
-        .catch(error => console.error('Fehler:', error)); //Fehlerprotokollierung
+        .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
 }
 
 //Erstellung/Anzeige Tabelle 
 function displayTable(data) {
-    const tableBody = document.querySelector('#tableData tbody'); //Tabellevariable auswaehlen
+    const tableBody = document.querySelector("#tableData tbody"); //Tabellevariable auswaehlen
 
     //Pruefen, ob Tabellenvariable vorhanden
     if (!tableBody) {
-        console.error('Fehler: tbody-Element nicht gefunden');
+        console.error("Fehler: tbody-Element nicht gefunden");
         return;
     }
 
-    tableBody.innerHTML = ''; //Tabelle leeren
+    tableBody.innerHTML = ""; //Tabelle leeren
 
     //Daten iterieren und Zeilen erstellen
     data.forEach(item => {
-        const row = document.createElement('tr'); //Neue Tabellenzeile 
+        const row = document.createElement("tr"); //Neue Tabellenzeile 
         row.innerHTML = `
             <td>${sanitize(item.name)}</td> <!-- Name einfuegen -->
             <td>${sanitize(item.emissionen)}</td> <!-- Emissionen einfuegen -->
@@ -57,38 +57,38 @@ function displayTable(data) {
 
 //Sortierung Name/Emissionen.
 function sortTable(column) {
-    const tableBody = document.querySelector('#tableData tbody'); //Tabellenkörper auswaehlen
+    const tableBody = document.querySelector("#tableData tbody"); //Tabellenkörper auswaehlen
 
     //Pruefen, ob das Tabellen-Body-Element vorhanden ist
     if (!tableBody) return;
 
     const rows = Array.from(tableBody.rows); //Tabellenzeilen erfassen
-    const index = column === 'name' ? 0 : 1; //Spaltenindex festlegen
-    const ascending = tableBody.getAttribute('data-sort') !== 'asc'; //Sortierreihenfolge 
+    const index = column === "name" ? 0 : 1; //Spaltenindex festlegen
+    const ascending = tableBody.getAttribute("data-sort") !== "asc"; //Sortierreihenfolge 
 
     //Sortierlogik
     rows.sort((a, b) => {
         const cellA = a.cells[index].innerText.trim(); //Zellenwert auslesen (A)
         const cellB = b.cells[index].innerText.trim(); //Zellenwert auslesen (B)
 
-        return ascending 
+        return ascending
             ? (isNaN(cellA) ? cellA.localeCompare(cellB) : cellA - cellB) //Aufsteigend sortieren
             : (isNaN(cellB) ? cellB.localeCompare(cellA) : cellB - cellA); //Absteigend sortieren
     });
 
     //Sortierte Zeilen einfuegen
-    tableBody.innerHTML = '';
+    tableBody.innerHTML = "";
     rows.forEach(row => tableBody.appendChild(row));
-    tableBody.setAttribute('data-sort', ascending ? 'asc' : 'desc'); //Sortierreihenfolge aktualisieren
+    tableBody.setAttribute("data-sort", ascending ? "asc" : "desc"); //Sortierreihenfolge aktualisieren
 }
 
 //Bereinigung Eingaben
 function validateInputs() {
-    const inputs = document.querySelectorAll('input, textarea, select'); //Alle Eingabefelder 
-    
+    const inputs = document.querySelectorAll("input, textarea, select"); //Alle Eingabefelder 
+
     //Eingabe validieren, sobald Nutzer tippt
     inputs.forEach(input => {
-        input.addEventListener('input', (e) => {
+        input.addEventListener("input", (e) => {
             e.target.value = sanitize(e.target.value); //Eingabe bereinigen
         });
     });
@@ -96,7 +96,7 @@ function validateInputs() {
 
 //Bereinigt Eingaben, um potenzielle Angriffe zu verhindern.
 function sanitize(input) {
-    const temp = document.createElement('div'); //Temporaeres HTML-Element erstellen
+    const temp = document.createElement("div"); //Temporaeres HTML-Element erstellen
     temp.textContent = input; //Textinhalt festlegen
     return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben
 }
@@ -104,9 +104,13 @@ function sanitize(input) {
 //Menu basierend auf Sprache
 function initializeMenu() {
     const htmlElement = document.documentElement; //Root-Element auswaehlen
+    const rtl = ["ar", "he", "fa", "ur"]; // Sprachen mit RTL
+    const userLanguage = navigator.language || navigator.userLanguage; // Browsersprache ermitteln
 
-    if (!htmlElement.getAttribute('dir')) {
-        htmlElement.setAttribute('dir', 'rtl'); // Nur setzen, wenn nicht bereits manuell festgelegt
+    if (rtl.some(language => userLanguage.startWith(language))) {
+        htmlElement.setAttribute("dir", "rtl"); // Nur setzen, wenn nicht bereits manuell festgelegt
+    } else {
+        htmlElement.setAttribute("dir", "ltr");
     }
 }
 

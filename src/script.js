@@ -34,7 +34,6 @@ function filterTable(data) {
             displayTable(data.unternehmen);
         }
     });
-
 }
 
 //Erstellung/Anzeige Tabelle 

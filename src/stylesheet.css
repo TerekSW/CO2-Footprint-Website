@@ -133,7 +133,6 @@ html[dir="rtl"] .menuLink {
     max-height: 500px; /* Maximale Höhe festlegen */
     overflow-y: auto; /* Vertikale Scrollbar anzeigen */
     overflow-x: auto; /* Horizontale Scrollbar anzeigen */
-    box-sizing: border-box;
 }
 
 .table-responsive h2 {

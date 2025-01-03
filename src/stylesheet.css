@@ -159,8 +159,13 @@ html[dir="rtl"] .menuLink {
 
 /* Footer */
 .footer {
-    padding: 20px ;
-    margin-top: 40px;
+    background-color: green; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    position: fixed; /*Footer fest am Ende der Seite*/
+    bottom: 0; /*unteren Rand ausgerichtet*/
+    width: 100%; /*Volle Breite*/;
 }
 
 .footerList {
@@ -171,6 +176,7 @@ html[dir="rtl"] .menuLink {
 .footerList li {
     display: inline-block; /*Links nebeneinander*/
     margin: 0 10px; /*Horizontaler Abstand*/
+    font-weight: bold;
 }
 
 .footerLink {

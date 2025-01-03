@@ -27,14 +27,14 @@
     ],
 
     "unternehmen": [
+      {"name": "Shell", "emissionen": 900},
+      {"name": "BP", "emissionen": 850},
+      {"name": "TotalEnergies", "emissionen": 800},
       {"name": "China National Petroleum", "emissionen": 1600},
       {"name": "Saudi Aramco", "emissionen": 1500},
       {"name": "Gazprom", "emissionen": 1400},
       {"name": "National Iranian Oil Company", "emissionen": 1200},
       {"name": "ExxonMobil", "emissionen": 1000},
-      {"name": "Shell", "emissionen": 900},
-      {"name": "BP", "emissionen": 850},
-      {"name": "TotalEnergies", "emissionen": 800},
       {"name": "RWE", "emissionen": 700},
       {"name": "E.ON", "emissionen": 650},
       {"name": "BASF", "emissionen": 240},

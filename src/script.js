@@ -16,7 +16,7 @@ function fetchData() {
             return response.json(); //Antwort in JSON umwandeln
         })
         .then(data => {
-            displayTable(data.land);
+            displayTable(data.land); 
             filterTable(data);
         })
         .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
@@ -52,8 +52,8 @@ function displayTable(data) {
     data.forEach(item => {
         const row = document.createElement("tr"); //Neue Tabellenzeile 
         row.innerHTML = `
-            < td > ${ sanitize(item.name) }</td >
-                <td>${sanitize(item.emissionen)}</td>
+            <td>${cleanInput(item.name)}</td> 
+            <td>${cleanInput(item.emissionen)}</td> 
         `;
         tableBody.appendChild(row); //Zeile zu Tabelle hinzufuegen
     });
@@ -93,13 +93,13 @@ function validateInputs() {
     //Eingabe validieren, sobald Nutzer tippt
     inputs.forEach(input => {
         input.addEventListener("input", (e) => {
-            e.target.value = sanitize(e.target.value); //Eingabe bereinigen
+            e.target.value = cleanInput(e.target.value); //Eingabe bereinigen
         });
     });
 }
 
 //Bereinigt Eingaben, um potenzielle Angriffe zu verhindern.
-function sanitize(input) {
+function cleanInput(input) {
     const temp = document.createElement("div"); //Temporaeres HTML-Element erstellen
     temp.textContent = input; //Textinhalt festlegen
     return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben

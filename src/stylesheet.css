@@ -125,16 +125,18 @@ html[dir="rtl"] .menuLink {
 
 /* Tabelle */
 .table {
-    table-layout: fixed; /*Feste Spaltenbreiten*/
+    table-layout: fixed; /*Feste Spaltenbreiten*/ 
+    
 }
 
-.tableSection {
-    margin: 30px auto; /*Zentriert mit Abstand*/
-    padding: 20px;
-    overflow-x: auto; /*Horizontale Scrollleiste bei Bedarf*/
+.table-responsive {
+    max-height: 500px; /* Maximale Höhe festlegen */
+    overflow-y: auto; /* Vertikale Scrollbar anzeigen */
+    overflow-x: auto; /* Horizontale Scrollbar anzeigen */
+    box-sizing: border-box;
 }
 
-.tableSection h2 {
+.table-responsive h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
@@ -148,9 +150,14 @@ html[dir="rtl"] .menuLink {
     font-size: larger;
 }
 
+.table-responsive thead {
+    position: sticky;
+    top: 0;
+}
+
 .table th,
 .table td {
-    padding: 10px; 
+    padding: 10px;
 }
 
 .tableBtn:hover {

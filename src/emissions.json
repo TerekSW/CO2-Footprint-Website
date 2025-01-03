@@ -9,7 +9,21 @@
       {"name": "Iran", "emissionen": 720},
       {"name": "Saudi-Arabien", "emissionen": 635},
       {"name": "Südkorea", "emissionen": 611},
-      {"name": "Indonesien", "emissionen": 540}
+      {"name": "Indonesien", "emissionen": 540},     
+      {"name": "Frankreich", "emissionen": 370},
+      {"name": "Italien", "emissionen": 360},
+      {"name": "Spanien", "emissionen": 350},
+      {"name": "Türkei", "emissionen": 340},
+      {"name": "Argentinien", "emissionen": 330},
+      {"name": "Thailand", "emissionen": 320},
+      {"name": "Vietnam", "emissionen": 310},
+      {"name": "Malaysia", "emissionen": 300},
+      {"name": "Polen", "emissionen": 290},
+      {"name": "Pakistan", "emissionen": 280},
+      {"name": "Ägypten", "emissionen": 270},
+      {"name": "Ukraine", "emissionen": 260},
+      {"name": "Niederlande", "emissionen": 250},
+      {"name": "Philippinen", "emissionen": 240}
     ],
 
     "unternehmen": [

@@ -68,14 +68,14 @@ function sortTable(column) {
 
     const rows = Array.from(tableBody.rows); //Tabellenzeilen erfassen
     const index = column === "name" ? 0 : 1; //Spaltenindex festlegen
-    const ascending = tableBody.getAttribute("data-sort") !== "asc"; //Sortierreihenfolge 
+    const sortOrder = tableBody.getAttribute("data-sort") !== "asc"; //Sortierreihenfolge 
 
     //Sortierlogik
     rows.sort((a, b) => {
         const cellA = a.cells[index].innerText.trim(); //Zellenwert auslesen (A)
         const cellB = b.cells[index].innerText.trim(); //Zellenwert auslesen (B)
 
-        return ascending
+        return sortOrder
             ? (isNaN(cellA) ? cellA.localeCompare(cellB) : cellA - cellB) //Aufsteigend sortieren
             : (isNaN(cellB) ? cellB.localeCompare(cellA) : cellB - cellA); //Absteigend sortieren
     });
@@ -83,7 +83,7 @@ function sortTable(column) {
     //Sortierte Zeilen einfuegen
     tableBody.innerHTML = "";
     rows.forEach(row => tableBody.appendChild(row));
-    tableBody.setAttribute("data-sort", ascending ? "asc" : "desc"); //Sortierreihenfolge aktualisieren
+    tableBody.setAttribute("data-sort", sortOrder ? "asc" : "desc"); //Sortierreihenfolge aktualisieren
 }
 
 //Bereinigung Eingaben

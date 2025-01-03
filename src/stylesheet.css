@@ -182,7 +182,6 @@ html[dir="rtl"] .menuLink {
 .footerList li {
     display: inline-block; /*Links nebeneinander*/
     margin: 0 10px; /*Horizontaler Abstand*/
-    font-weight: bold;
 }
 
 .footerLink {

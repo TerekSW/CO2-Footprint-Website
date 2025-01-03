@@ -16,7 +16,7 @@ function fetchData() {
             return response.json(); //Antwort in JSON umwandeln
         })
         .then(data => {
-            displayTable(data.land); 
+            displayTable(data.land);
             filterTable(data);
         })
         .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
@@ -52,8 +52,8 @@ function displayTable(data) {
     data.forEach(item => {
         const row = document.createElement("tr"); //Neue Tabellenzeile 
         row.innerHTML = `
-            <td>${sanitize(item.name)}</td> <!-- Name einfuegen -->
-            <td>${sanitize(item.emissionen)}</td> <!-- Emissionen einfuegen -->
+            < td > ${ sanitize(item.name) }</td >
+                <td>${sanitize(item.emissionen)}</td>
         `;
         tableBody.appendChild(row); //Zeile zu Tabelle hinzufuegen
     });

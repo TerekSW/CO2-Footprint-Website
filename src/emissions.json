@@ -36,7 +36,9 @@
       {"name": "BP", "emissionen": 850},
       {"name": "TotalEnergies", "emissionen": 800},
       {"name": "RWE", "emissionen": 700},
-      {"name": "E.ON", "emissionen": 650}
+      {"name": "E.ON", "emissionen": 650},
+      {"name": "BASF", "emissionen": 240},
+      {"name": "Dow Chemical", "emissionen": 220}
     ]
 }
   

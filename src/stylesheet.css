@@ -131,13 +131,7 @@ html[dir="rtl"] .menuLink {
 .tableSection {
     margin: 30px auto; /*Zentriert mit Abstand*/
     padding: 20px;
-    background: white;
-    border-radius: 8px; /*Abgerundete Ecken*/
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Leichter Schatten*/
-    max-width: 70%; /*Maximale Breite*/
     overflow-x: auto; /*Horizontale Scrollleiste bei Bedarf*/
-    font-size: large;
-    font-weight: bold;
 }
 
 .tableSection h2 {

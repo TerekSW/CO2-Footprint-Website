@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //laedt JSON-Datei
 function fetchData() {
+
     fetch("emissions.json") //JSON-Datei abrufen
         .then(response => {
             //pruefen ob Antwort erfolgreich
@@ -16,7 +17,7 @@ function fetchData() {
             return response.json(); //Antwort in JSON umwandeln
         })
         .then(data => {
-            displayTable(data.land); 
+            displayTable(data.land);
             filterTable(data);
         })
         .catch(error => console.error("Fehler:", error)); //Fehlerprotokollierung
@@ -38,6 +39,7 @@ function filterTable(data) {
 
 //Erstellung/Anzeige Tabelle 
 function displayTable(data) {
+
     const tableBody = document.querySelector("#tableData tbody"); //Tabellevariable auswaehlen
 
     //Pruefen, ob Tabellenvariable vorhanden
@@ -61,6 +63,7 @@ function displayTable(data) {
 
 //Sortierung Name/Emissionen.
 function sortTable(column) {
+
     const tableBody = document.querySelector("#tableData tbody"); //Tabellenkörper auswaehlen
 
     //Pruefen, ob das Tabellen-Body-Element vorhanden ist
@@ -87,7 +90,8 @@ function sortTable(column) {
 }
 
 //Bereinigung Eingaben
-function validateInputs() {
+//Noetig, wenn Filter mit Eingabe funktionieren sollte, oder ein Suchfeld vorhanden ist
+/* function validateInputs() {
     const inputs = document.querySelectorAll("input, textarea, select"); //Alle Eingabefelder 
 
     //Eingabe validieren, sobald Nutzer tippt
@@ -96,17 +100,40 @@ function validateInputs() {
             e.target.value = cleanInput(e.target.value); //Eingabe bereinigen
         });
     });
-}
+} */
 
 //Bereinigt Eingaben, um potenzielle Angriffe zu verhindern.
 function cleanInput(input) {
-    const temp = document.createElement("div"); //Temporaeres HTML-Element erstellen
-    temp.textContent = input; //Textinhalt festlegen
-    return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben
+
+    //Bereinigung bei String-Input
+    if(typeof input === "string") {
+        const temp = document.createElement("div"); //Temporaeres HTML-Element erstellen
+        temp.textContent = input; //Textinhalt festlegen
+        return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben
+    }
+
+    //Zahlen muessen nicht bereinigt werden
+    if (typeof input === "number") {
+        return input;
+    }
+
+    //Bereinigung bei Object-Input
+    if(typeof input === "object" && input !== null) {   //pruefen, ob Objekt vorhanden
+        for(const value in input) {
+            if(typeof input[value] === "string") {  //rekursiver Aufruf String bereinigen
+                input[value] = cleanInput( input[value]);
+            }
+            else if(typeof   input[value] === "object" && input[value] !== null) {
+                input[value] = cleanInput(input[value]); //rekursiver Aufruf Objekt bereinigen
+            }
+        }
+        return input;
+    }
 }
 
 //Menu basierend auf Sprache
 function initializeMenu() {
+
     const htmlElement = document.documentElement; //Root-Element auswaehlen
     const rtl = ["ar", "he", "fa", "ur"]; // Sprachen mit RTL
     const userLanguage = navigator.language || navigator.userLanguage; // Browsersprache ermitteln

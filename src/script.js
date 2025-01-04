@@ -106,7 +106,7 @@ function sortTable(column) {
 function cleanInput(input) {
 
     //Bereinigung bei String-Input
-    if(typeof input === "string") {
+    if (typeof input === "string") {
         const temp = document.createElement("div"); //Temporaeres HTML-Element erstellen
         temp.textContent = input; //Textinhalt festlegen
         return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben
@@ -118,18 +118,11 @@ function cleanInput(input) {
     }
 
     //Bereinigung bei Object-Input
-    if(typeof input === "object" && input !== null) {   //pruefen, ob Objekt vorhanden
-        for(const value in input) {
-            if(typeof input[value] === "string") {  //rekursiver Aufruf String bereinigen
-                input[value] = cleanInput( input[value]);
-            }
-            else if(typeof   input[value] === "object" && input[value] !== null) {
-                input[value] = cleanInput(input[value]); //rekursiver Aufruf Objekt bereinigen
-            }
-        }
+    if (typeof input === "object" && input !== null) {   //pruefen, ob Objekt vorhanden
+        input[value] = cleanInput(input[value]); //rekursiver Aufruf Objekt bereinigen
         return input;
     }
-}
+} 
 
 //Menu basierend auf Sprache
 function initializeMenu() {

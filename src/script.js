@@ -91,7 +91,7 @@ function sortTable(column) {
 
 //Bereinigung Eingaben
 //Noetig, wenn Filter mit Eingabe funktionieren sollte, oder ein Suchfeld vorhanden ist
-/* function validateInputs() {
+function validateInputs() {
     const inputs = document.querySelectorAll("input, textarea, select"); //Alle Eingabefelder 
 
     //Eingabe validieren, sobald Nutzer tippt
@@ -100,7 +100,7 @@ function sortTable(column) {
             e.target.value = cleanInput(e.target.value); //Eingabe bereinigen
         });
     });
-} */
+}
 
 //Bereinigt Eingaben, um potenzielle Angriffe zu verhindern.
 function cleanInput(input) {
@@ -112,17 +112,18 @@ function cleanInput(input) {
         return temp.innerHTML; //Bereinigten HTML-Text zurueckgeben
     }
 
-    //Zahlen muessen nicht bereinigt werden
-    if (typeof input === "number") {
-        return input;
-    }
-
     //Bereinigung bei Object-Input
     if (typeof input === "object" && input !== null) {   //pruefen, ob Objekt vorhanden
         input[value] = cleanInput(input[value]); //rekursiver Aufruf Objekt bereinigen
         return input;
     }
-} 
+    //Zahlen muessen nicht bereinigt werden
+    if (typeof input === "number") {
+        return input;
+    }
+
+
+}
 
 //Menu basierend auf Sprache
 function initializeMenu() {
